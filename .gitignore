@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-Components
+HomePage
+Reusable
+db
 db
 node_modules
 dist

@@ -19,9 +19,8 @@ function App() {
 
   )
 }
-// {Array.from(Array(2).keys()).map((el) => (
-//     <ActDocCard key={el} title={'Document  name'} />
-// ))}
+
+// 
 //                          {bestRestaurants.slice(0, 2).map((data, index) => (
 //     <Card key={index} restaurant={data} />
 // ))}
