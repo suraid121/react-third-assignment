@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+
+@theme {
+    --font-Lexend: "Lexend", sans-serif;
+    --font-Roboto: "Roboto Slab", serif;
+}
+@theme{
+    --color-search-border:#ADADAD;
+    --color-input-border:#7A7A7A;
+    --color-search-bar-button:#1E1E1E;
+    --color-nav-link:#AFAFAF;
+    --color-restaurantCarousel:#1677BD;
+    --color-card:#F8F8F8;
+    --color-card-heading:#232323;
+    --color-card-text:#8F8F8F;
+    --color-card-review:#7A7A7A;
+
+}
