@@ -72,7 +72,7 @@ const RestaurantCarousel = () => {
     );
 
     return (
-        <div className="bg-[#1780c6] px-4 flex py-6 rounded-[9px] text-white mx-4 sm:mx-6 md:mx-12 mt-10">
+        <div className="bg-[#1780c6] px-4  py-6 rounded-[9px] text-white mx-4 sm:mx-6 md:mx-12 mt-10">
             <h2 className="text-[24px] sm:text-[28px]  md:text-[32px] lg:text-start lg:ml-20 text-center font-[400]  font-Lexend mb-6">
                 Find the best restaurant ratings below
             </h2>

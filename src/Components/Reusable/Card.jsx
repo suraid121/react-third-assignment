@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { GoldenStar, SilverStar, GoldenSilverStar } from "../icon";
+import { GoldenStar, SilverStar, GoldenSilverStar  } from "../icon";
 import cn from "../../Utilities/cn";
 
-const Card = ({ restaurant, className,  imgH, }) => {
+const Card = ({ restaurant, className,  imgH,  imgW }) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     if (!restaurant) return null;
@@ -18,7 +18,7 @@ const Card = ({ restaurant, className,  imgH, }) => {
                 <img
                     src={restaurant.img?.[currentImage]}
                     alt={restaurant.name}
-                    style={{  height: `${imgH}px` }}
+                    style={{  height: `${imgH}px` , width: `${imgW}px`  }}
                     className='object-cover rounded-[14px] w-full'
                 />
                 {/* Dot Indicators */}
@@ -36,7 +36,7 @@ const Card = ({ restaurant, className,  imgH, }) => {
 
             <div className="px-4 pb-3 pt-2">
                 <h3 className="text-xl font-semibold text-card-heading">{restaurant.name}</h3>
-                <p className="text-sm text-card-text font-[400] mt-1">{restaurant.des}</p>
+                <p className="text-sm text-card-text font-[400] max-w-[300px] mt-1">{restaurant.des}</p>
 
                 {/* Rating Display */}
                 <div className="mt-4 flex items-center gap-1 text-sm">

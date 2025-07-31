@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import restaurantsCardData from "../../db/restaurantsCardData"; // adjust path
+import restaurantsCardData from "../../db/restaurantsCardData"; 
 
 const SearchBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -52,12 +52,15 @@ const SearchBar = () => {
         setLocation(rest.location);
         setShowSuggestions(false);
     };
+    const retrunHome =()=>{
+        navigate('/')
+    } 
 
     return (
         <>
             <section className="flex items-center justify-between p-4 py-6 border-b-2 border-b-[#DCDCDC] relative z-50">
                 <div className="hidden md:block">
-                    <img src="/logo.svg" alt="logo" className="w-28" />
+                    <img src="/logo.svg" alt="logo" onClick={retrunHome} className="w-28" />
                 </div>
 
                 <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
@@ -124,7 +127,7 @@ const SearchBar = () => {
 
                 <div className="items-center gap-4 hidden lg:flex">
                     <img src="/earth.svg" alt="earth" />
-                    <button className="bg-search-bar-button px-6 py-3 text-white rounded-full hover:ring-2 hover:ring-blue-500 ring-offset-2 transition-all">
+                    <button className="bg-search-bar-button px-6 py-3 cursor-pointer text-white rounded-full hover:ring-2 hover:ring-blue-500 ring-offset-2 transition-all">
                         MyFeedback for business
                     </button>
                 </div>
@@ -141,7 +144,9 @@ const SearchBar = () => {
             {/* Mobile Menu */}
             <div className={`fixed inset-0 bg-white z-50 transform transition-transform duration-500 ease-in-out md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex justify-end p-4">
-                    <button onClick={() => setMenuOpen(false)} className="text-3xl font-bold">✕</button>
+                    <button onClick={() => setMenuOpen(false)} className="text-3xl font-bold">
+                        <img src="/cross.svg" alt="cross" />
+                    </button>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-6 h-full">
                     <img src="/earth.svg" alt="earth" className="w-6 h-6" />

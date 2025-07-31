@@ -13,7 +13,7 @@ const Trends = () => {
             </div>
             <div className="flex flex-col gap-5 items-center mb-10" >
                 <h4 className="font-Lexend  font-[400] text-[22px] text-[#1E1E1E] ">Discover more cool restaurants</h4>
-                <button className="font-[400] text-[19px] bg-[#1677BD] w-[175px] h-[47px] rounded-full text-white cursor-pointer " > Show more  </button>
+                <button className="font-[400] text-[19px] bg-[#1677BD] w-[175px] h-[47px] rounded-full text-white cursor-pointer hover:ring-2 hover:ring-blue-500 ring-offset-2 transition-all " > Show more  </button>
             </div>
         </section>
     )

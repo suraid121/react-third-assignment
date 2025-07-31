@@ -33,13 +33,13 @@ const Recent = () => {
 
     return (
         <section className="py-12 px-4 md:px-8 lg:px-16">
-            <h2 className="text-2xl font-bold mb-8">Recent Activities</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Recent Activities</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 bg-[#F8F8F8] place-items-center">
+            <div className="flex flex-wrap justify-center  gap-6 ">
                 {activities.map((activity, idx) => (
                     <div
                         key={idx}
-                        className="bg-[#FAFAFA] w-[457px] h-[500px] rounded-[14px] p-6"
+                        className="bg-[#FAFAFA] w-[450px]  rounded-[14px] p-6"
                     >
                         {/* Avatar and Name */}
                         <div className="flex items-center gap-3 mb-2">

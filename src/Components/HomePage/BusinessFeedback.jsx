@@ -9,7 +9,7 @@ const BusinessFeedback = () => {
                 <p className="text-base text-[#5E5E5E]">
                     The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.
                 </p>
-                <button className="bg-search-bar-button px-8 py-3 mt-4 text-white rounded-full w-fit">
+                <button className="bg-search-bar-button px-8 py-3 hover:ring-2 cursor-pointer hover:ring-blue-500 ring-offset-2 transition-all mt-4 text-white rounded-full w-fit">
                     Explore MyFeedback business
                 </button>
             </div>
