@@ -1,5 +1,6 @@
 import './App.css'
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import "./Index.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Components/HomePage/Home';
 import SearchBar from './Components/Common/SearchBar';
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home />} ></Route>
       </Routes>
     </BrowserRouter>
+    
     // <div>
     //   <Filter restaurants={restaurantsCardData} />
     // </div>
