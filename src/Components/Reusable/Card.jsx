@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GoldenStar, SilverStar, GoldenSilverStar  } from "../icon";
 import cn from "../../Utilities/cn";
 
-const Card = ({ restaurant, className,  imgH,  imgW }) => {
+const Card = ({ restaurant, className,  imgH,  imgW , onClick }) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     if (!restaurant) return null;
@@ -13,7 +13,7 @@ const Card = ({ restaurant, className,  imgH,  imgW }) => {
     const mixed = Math.max(totalStars - golden - silver, 0);
 
     return (
-        <div className={cn('rounded-[14px]   bg-card  font-Roboto ' , className)} >
+        <div onClick={onClick} className={cn('rounded-[14px]   bg-card  font-Roboto ' , className)} >
             <div className="relative">
                 <img
                     src={restaurant.img?.[currentImage]}

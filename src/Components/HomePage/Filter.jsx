@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Card from "../Reusable/Card";
+import { useNavigate } from "react-router-dom";
 
 const Filter = ({ restaurants }) => {
     const [sortType, setSortType] = useState("all");
@@ -19,7 +20,6 @@ const Filter = ({ restaurants }) => {
         setFiltered(sorted);
     }, [sortType, restaurants]);
 
-    // 🧠 Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -30,6 +30,13 @@ const Filter = ({ restaurants }) => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
+    const navigate = useNavigate();
+
+    const handleCardClick = (data) => {
+        navigate(`/restaurant/${encodeURIComponent(data.name)}`, {
+            state: { restaurant: data },
+        });
+    };
     return (
         <div className="flex flex-col lg:flex-row justify-end ">
             <div className=" px-3 lg:mr-20 " >
@@ -79,7 +86,7 @@ const Filter = ({ restaurants }) => {
                 {/* Cards Grid */}
                 <div className="flex flex-col items-baseline gap-6  transition-all duration-300">
                     {filtered.map((restaurant, index) => (
-                        <Card key={index} restaurant={restaurant} imgH={189} imgW={209} className=" border-b-[#DCDCDC] rounded-none border-b-1   py-10  flex  bg-white flex-row " />
+                        <Card key={index} onClick={() => handleCardClick(restaurant)} restaurant={restaurant} imgH={189} imgW={209} className=" border-b-[#DCDCDC] rounded-none border-b-1   py-10  flex  bg-white flex-row " />
                     ))}
                 </div>
 
